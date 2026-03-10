@@ -3,7 +3,7 @@ import HoverLinks from "./HoverLinks";
 
 const Contact = () => {
     return (
-        <section className="contact-section">
+        <section className="contact-section" id="contact">
             <div className="section-container contact-container" style={{ margin: "auto" }}>
                 <h3>Contact</h3>
                 <div className="contact-flex">

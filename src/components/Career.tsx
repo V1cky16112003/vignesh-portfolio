@@ -69,7 +69,7 @@ const Career = () => {
     }, []);
 
     return (
-        <section className="career-section" ref={sectionRef}>
+        <section className="career-section" id="career" ref={sectionRef}>
             <h2>
                 <span>My career & experience</span>
             </h2>

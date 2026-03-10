@@ -82,7 +82,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <section className="projects-section" ref={sectionRef}>
+        <section className="projects-section" id="projects" ref={sectionRef}>
             <h2>
                 <span>My Projects</span>
             </h2>

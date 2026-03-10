@@ -27,15 +27,33 @@ const techItems = [
 
 const TechStack = () => {
     return (
-        <section className="techstack">
-            <h2>My Techstack</h2>
+        <section
+            style={{
+                width: "100%",
+                position: "relative",
+                overflow: "clip",
+                padding: "100px 0",
+                margin: "50px auto",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "50px",
+            }}
+        >
+            <h2
+                style={{
+                    fontSize: "80px",
+                    textAlign: "center",
+                    fontWeight: 400,
+                    textTransform: "uppercase",
+                    margin: 0,
+                }}
+            >
+                My Techstack
+            </h2>
             <div
                 style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: 0,
                     width: "100%",
-                    transform: "translateY(-50%)",
                     display: "flex",
                     flexDirection: "column",
                     gap: "20px",
