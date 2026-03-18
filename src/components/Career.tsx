@@ -8,24 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 const careerData = [
     {
         year: "NOW",
-        role: "MSc Data Science",
+        role: "MSc in Data Science",
         company: "King's College London",
         description:
-            "Focus on AI, Analytics, and Data Engineering. Building expertise in Generative AI, Multimodal Systems, and advanced machine learning techniques.",
+            "Focus on AI, Analytics, and Data Engineering. Multimodal systems, GenAI, and uncertainty-aware modelling. Expected Distinction (Semester 1 average: 71.7%).",
     },
     {
         year: "2024",
         role: "AI Intern",
         company: "4i Apps Solutions",
         description:
-            "Conducted advanced clustering techniques and designed deep learning models for pattern recognition. Managed datasets over 1 GB and achieved a 5% improvement in model accuracy through hyperparameter tuning.",
+            "Applied deep learning techniques (TensorFlow/Keras) across image and NLP classification tasks, and developed clustering models for customer segmentation.",
     },
     {
         year: "2023",
         role: "Data Science Intern",
         company: "4i Apps Solutions",
         description:
-            "Developed machine learning algorithms and analysed data using Python libraries. Created predictive models and completed data preprocessing and feature engineering, resulting in a 30% improvement in model accuracy.",
+            "Completed end-to-end data science workflow — data cleaning with Pandas/NumPy, EDA, and ML model building using Scikit-Learn. Produced visualisations with Matplotlib and Seaborn.",
     },
     {
         year: "2021",

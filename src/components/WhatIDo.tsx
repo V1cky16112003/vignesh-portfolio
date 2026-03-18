@@ -43,15 +43,15 @@ const WhatIDo = () => {
                     <h5>Skillset & tools</h5>
                     <div className="whatido-skills">
                         <span>Python</span>
+                        <span>PyTorch</span>
                         <span>TensorFlow</span>
-                        <span>Scikit-Learn</span>
-                        <span>NLP</span>
-                        <span>Computer Vision</span>
+                        <span>GNNs</span>
                         <span>LLMs</span>
                         <span>Generative AI</span>
-                        <span>OpenAI</span>
-                        <span>Gemini</span>
-                        <span>FastAPI</span>
+                        <span>NLP</span>
+                        <span>Computer Vision</span>
+                        <span>Affective Computing</span>
+                        <span>Transfer Learning</span>
                     </div>
                 </div>
                 <div className="whatido-card">
@@ -70,10 +70,10 @@ const WhatIDo = () => {
                         <span>Tableau</span>
                         <span>Matplotlib</span>
                         <span>Seaborn</span>
-                        <span>D3.js</span>
                         <span>Oracle Cloud</span>
+                        <span>Azure</span>
                         <span>MySQL</span>
-                        <span>React.js</span>
+                        <span>FastAPI</span>
                     </div>
                 </div>
             </div>

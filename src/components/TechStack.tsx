@@ -5,22 +5,31 @@ const techItems = [
     "SQL",
     "C/C++",
     "Java",
+    "PyTorch",
     "TensorFlow",
     "Scikit-Learn",
+    "GNNs",
+    "LLMs",
+    "Generative AI",
     "NLP",
     "Computer Vision",
-    "Generative AI",
-    "LLMs",
-    "Apache Spark",
-    "Hadoop",
+    "Affective Computing",
+    "EEG/EDA/BVP",
+    "Multimodal Fusion",
+    "Uncertainty Modelling",
+    "Transfer Learning",
+    "Oracle Cloud",
+    "Azure",
+    "FastAPI",
+    "MySQL",
+    "React.js",
     "Tableau",
     "Matplotlib",
     "Seaborn",
     "D3.js",
-    "FastAPI",
-    "React.js",
-    "Oracle Cloud",
-    "MySQL",
+    "Apache Spark",
+    "Hadoop",
+    "Docker",
     "Bloomberg Terminal",
     "ServiceNow",
 ];
@@ -81,7 +90,7 @@ const TechStack = () => {
                     ))}
                 </Marquee>
                 <Marquee speed={30} gradient={false} direction="right">
-                    {techItems.slice(11).map((item, i) => (
+                    {techItems.slice(11, 21).map((item, i) => (
                         <span
                             key={i}
                             style={{
@@ -102,7 +111,7 @@ const TechStack = () => {
                     ))}
                 </Marquee>
                 <Marquee speed={35} gradient={false} direction="left">
-                    {[...techItems].reverse().map((item, i) => (
+                    {techItems.slice(21).map((item, i) => (
                         <span
                             key={i}
                             style={{

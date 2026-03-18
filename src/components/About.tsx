@@ -41,12 +41,7 @@ const About = () => {
             <div className="about-me">
                 <h3>About Me</h3>
                 <p>
-                    MSc Data Science student at King's College London, focused on building
-                    and applying Generative AI and Multimodal Systems. Experienced in
-                    developing end-to-end AI applications from system architecture and
-                    cloud-based inference to frontend integration. Driven by the
-                    intersection of high-performance engineering and intuitive
-                    human-computer interaction.
+                    MSc Data Science student at King’s College London specialising in Generative AI, Multimodal Systems, and Affective Computing. Experienced in end-to-end AI development from uncertainty-aware deep learning and physiological signal processing to cloud inference and frontend integration. Driven by building AI that performs reliably in real-world, high-noise environments.
                 </p>
             </div>
         </section>
