@@ -41,7 +41,7 @@ const About = () => {
             <div className="about-me">
                 <h3>About Me</h3>
                 <p>
-                    MSc Data Science student at King’s College London specialising in Generative AI, Multimodal Systems, and Affective Computing. Experienced in end-to-end AI development from uncertainty-aware deep learning and physiological signal processing to cloud inference and frontend integration. Driven by building AI that performs reliably in real-world, high-noise environments.
+                    MSc Data Science student at King’s College London (71.7% Sem 1, Distinction trajectory) building DAMS-GCT — an uncertainty-aware GNN-Transformer for multimodal emotion recognition trained on NVIDIA A100 GPUs. Work spans vision, speech, and physiological signal AI, with hands-on PyTorch, uncertainty quantification, and end-to-end ML from research prototype to containerised REST API deployment. Available for full-time AI/ML Engineer roles in London from August 2026.
                 </p>
             </div>
         </section>

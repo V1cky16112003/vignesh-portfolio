@@ -8,31 +8,38 @@ gsap.registerPlugin(ScrollTrigger);
 const careerData = [
     {
         year: "NOW",
+        role: "ML Research Engineer (MSc Dissertation)",
+        company: "King's College London",
+        description:
+            "Designing DAMS-GCT (Dynamic Adaptive Multi-Scale Graph-Convolutional Transformer) for 7-class emotion recognition, fusing EEG, EDA, and BVP signals from SEED-VII across 20 subjects. Trained on KCL's HPC cluster using NVIDIA A100 GPUs. Implemented Monte Carlo Dropout for calibrated uncertainty quantification.",
+    },
+    {
+        year: "2025",
         role: "MSc in Data Science",
         company: "King's College London",
         description:
-            "Focus on AI, Analytics, and Data Engineering. Multimodal systems, GenAI, and uncertainty-aware modelling. Expected Distinction (Semester 1 average: 71.7%).",
+            "Expected Distinction — Semester 1 average: 71.7% (Distinction in 3 subjects). Key modules: Neural Networks & Deep Learning, Data Mining, Big Data Technologies, Statistics. Dissertation supervised by Dr. Helen Yannakoudakis.",
     },
     {
         year: "2024",
-        role: "AI Intern",
+        role: "AI Intern — Clustering & Deep Learning",
         company: "4i Apps Solutions",
         description:
-            "Applied deep learning techniques (TensorFlow/Keras) across image and NLP classification tasks, and developed clustering models for customer segmentation.",
+            "Built a K-Means segmentation pipeline on ~3–4 GB of purchase data for customer behavioural analysis. Trained and evaluated TensorFlow/Keras deep learning models for image classification and NLP tasks.",
     },
     {
         year: "2023",
         role: "Data Science Intern",
         company: "4i Apps Solutions",
         description:
-            "Completed end-to-end data science workflow — data cleaning with Pandas/NumPy, EDA, and ML model building using Scikit-Learn. Produced visualisations with Matplotlib and Seaborn.",
+            "Built an end-to-end classification pipeline — data cleaning with Pandas/NumPy, EDA, and model development with Scikit-Learn. Produced Matplotlib and Seaborn dashboards for client business reporting.",
     },
     {
         year: "2021",
-        role: "B.Tech Computer Science",
+        role: "B.Tech Computer Science & Engineering",
         company: "SRM Institute of Science & Technology",
         description:
-            "Computer Science and Engineering with GPA 8.73/10. Built a strong foundation in algorithms, data structures, and software engineering.",
+            "First Class with Distinction — GPA 8.73/10. Built a strong foundation in algorithms, data structures, and software engineering across a 4-year programme.",
     },
 ];
 

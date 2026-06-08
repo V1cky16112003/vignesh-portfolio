@@ -7,28 +7,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
     {
-        title: "Multimodal Emotion Recognition System",
+        title: "DAMS-GCT: Uncertainty-Aware Multimodal Emotion Recognition",
         subtitle: "MSc Dissertation",
-        date: "Jan 2026 - Present",
-        supervisor: "Supervisor: Dr. Helen Yannakoudakis",
+        date: "Jan 2026 – Present",
+        supervisor: "King's College London · Supervisor: Dr. Helen Yannakoudakis",
         description:
-            "Developing an uncertainty-aware multimodal emotion recognition system fusing physiological signals (EEG, EDA, BVP) with subject-specific personalisation features. Implementing Graph Neural Networks (GNNs) and transfer learning.",
+            "Designed DAMS-GCT (Dynamic Adaptive Multi-Scale Graph-Convolutional Transformer) — cross-modal attention fusion over spatio-temporal GNNs and Transformer encoders, processing EEG (310-dim) and eye-movement signals (33-dim) jointly on SEED-VII (20 subjects, 7 emotion classes). Reproduced the MAET baseline (52.46%) and implemented Monte Carlo Dropout for calibrated uncertainty quantification.",
         tech: [
             "PyTorch",
             "GNNs",
-            "EEG/EDA/BVP",
+            "Transformers",
+            "EEG Signal Processing",
+            "Uncertainty Quantification",
             "Transfer Learning",
-            "Uncertainty Modelling",
-            "Affective Computing",
+            "Weights & Biases",
+            "SLURM/HPC",
         ],
+        link: null,
     },
     {
-        title: "Conversational Image Recognition Chatbot",
+        title: "Conversational Multimodal Image Recognition Chatbot",
         subtitle: "A Multimodal AI Approach",
-        date: "Jan 2025 - May 2025",
-        supervisor: "Supervisor: Dr. J. Selvin Paul Peter",
+        date: "Jan 2025 – May 2025",
+        supervisor: "SRM Institute · Supervisor: Dr. J. Selvin Paul Peter",
         description:
-            "Built a multimodal conversational AI integrating real-time image recognition, OCR, NLP, speech-to-text, and text-to-speech using Gemini 2.0 Flash and Azure Cognitive Services. Designed scalable cloud architecture.",
+            "Built a multimodal chatbot combining real-time image recognition (Gemini 2.0 Flash), OCR (Azure Computer Vision), and voice I/O (Azure Speech) with support for English, Tamil, Hindi, and Telugu. Designed a production REST API with FastAPI backend and React.js frontend handling real-time multimodal inference with sub-second latency.",
         tech: [
             "Gemini 2.0 Flash",
             "Azure Cognitive Services",
@@ -39,14 +42,15 @@ const projectsData = [
             "TTS",
             "STT",
         ],
+        link: "https://github.com/V1cky16112003/Conversational-Image-Recognition-Chatbot",
     },
     {
-        title: "Automated Lecture Transcription & Summarisation",
+        title: "Automated Lecture Transcription & Summarisation System",
         subtitle: "AI-Powered Education Tool",
-        date: "Jul 2024 - Oct 2024",
-        supervisor: "Supervisor: Dr. J. Selvin Paul Peter",
+        date: "Aug 2024 – Nov 2024",
+        supervisor: "SRM Institute · Supervisor: Dr. J. Selvin Paul Peter",
         description:
-            "Built an automated lecture processing pipeline using OpenAI Whisper for transcription and Google-T5 for summarisation with real-time multilingual translation via Google Translate API.",
+            "Built an automated pipeline using OpenAI Whisper (transcription), T5 (summarisation), and Google Translate API (translation) across 4 languages — English, Tamil, Hindi, and Telugu. Tested on live TedX audio, achieving 95% transcription accuracy.",
         tech: [
             "OpenAI Whisper",
             "T5 Summarisation",
@@ -55,6 +59,7 @@ const projectsData = [
             "NLP",
             "Neural Machine Translation",
         ],
+        link: "https://github.com/V1cky16112003/Automated-Lecture-Transcription-and-Summarization-Sytsem-with-Multilingual-Support",
     },
 ];
 
@@ -100,6 +105,16 @@ const Projects = () => {
                                     <span key={i}>{t}</span>
                                 ))}
                             </div>
+                            {project.link && (
+                                <a
+                                    className="project-github-link"
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View on GitHub →
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}

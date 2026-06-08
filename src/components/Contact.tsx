@@ -42,11 +42,11 @@ const Contact = () => {
                         <div className="contact-certifications">
                             <h4>Certifications</h4>
                             <div className="cert-item">
-                                Oracle Certified Foundations Associate{" "}
+                                Oracle Cloud Infrastructure 2023 Certified Foundations Associate{" "}
                                 <span>— April 2024</span>
                             </div>
                             <div className="cert-item">
-                                AWS Academy ML Foundations <span>— April 2023</span>
+                                AWS Academy Machine Learning Foundations <span>— April 2023</span>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const Contact = () => {
                             textAlign: "center",
                         }}
                     >
-                        2025
+                        2026
                     </h5>
                 </div>
             </div>
