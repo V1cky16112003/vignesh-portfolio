@@ -1,0 +1,147 @@
+{
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/.claude/settings.local.json": {
+    "mtime": 1781007483.398836,
+    "ast_hash": "ae8d07ce46187afb66a198f5cb5ed9fa",
+    "semantic_hash": "ae8d07ce46187afb66a198f5cb5ed9fa"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/package.json": {
+    "mtime": 1780958996.348033,
+    "ast_hash": "7a7a065addf4c52ca6aa718268410565",
+    "semantic_hash": "7a7a065addf4c52ca6aa718268410565"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/App.tsx": {
+    "mtime": 1780958996.3508735,
+    "ast_hash": "f338fdf32cf1fa5ee4d3ab72b0fb7106",
+    "semantic_hash": "f338fdf32cf1fa5ee4d3ab72b0fb7106"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/About.tsx": {
+    "mtime": 1780959136.5545146,
+    "ast_hash": "4cac482cfca3c5a3318e022e34a8eb7b",
+    "semantic_hash": "4cac482cfca3c5a3318e022e34a8eb7b"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Career.tsx": {
+    "mtime": 1780959137.3471615,
+    "ast_hash": "c0f9f9b2daf5760ec37bf5a7c0679edd",
+    "semantic_hash": "c0f9f9b2daf5760ec37bf5a7c0679edd"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Contact.tsx": {
+    "mtime": 1780959168.503052,
+    "ast_hash": "6c4670db36c120284de1493710e96636",
+    "semantic_hash": "6c4670db36c120284de1493710e96636"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Cursor.tsx": {
+    "mtime": 1780958996.3519008,
+    "ast_hash": "8a74139b4e71356e5c450355f4ce921a",
+    "semantic_hash": "8a74139b4e71356e5c450355f4ce921a"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/HoverLinks.tsx": {
+    "mtime": 1780958996.3520348,
+    "ast_hash": "7b7e7fd4c7ad9d3b4c9e88e5065dd332",
+    "semantic_hash": "7b7e7fd4c7ad9d3b4c9e88e5065dd332"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Landing.tsx": {
+    "mtime": 1780961433.522069,
+    "ast_hash": "9e576060607b49c852484bc42c707036",
+    "semantic_hash": "9e576060607b49c852484bc42c707036"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Loading.tsx": {
+    "mtime": 1780958996.3526762,
+    "ast_hash": "f563d406304758dcea04d87d6b2a8957",
+    "semantic_hash": "f563d406304758dcea04d87d6b2a8957"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/MainContainer.tsx": {
+    "mtime": 1780958996.3535173,
+    "ast_hash": "013d73a0d000d766fc187f15e7deca90",
+    "semantic_hash": "013d73a0d000d766fc187f15e7deca90"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Navbar.tsx": {
+    "mtime": 1780958996.3537252,
+    "ast_hash": "ed1e06aa9f9dd5a33f98bdcc846173a4",
+    "semantic_hash": "ed1e06aa9f9dd5a33f98bdcc846173a4"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/Projects.tsx": {
+    "mtime": 1780959167.476329,
+    "ast_hash": "828a6a976847a2c8e345c68b9aa8db30",
+    "semantic_hash": "828a6a976847a2c8e345c68b9aa8db30"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/SocialIcons.tsx": {
+    "mtime": 1780959541.044276,
+    "ast_hash": "1ac957457360b1361254434fd8df83c1",
+    "semantic_hash": "1ac957457360b1361254434fd8df83c1"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/TechStack.tsx": {
+    "mtime": 1780959137.6824672,
+    "ast_hash": "a10ad02ec6d2f81eaea47156dfa845fb",
+    "semantic_hash": "a10ad02ec6d2f81eaea47156dfa845fb"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/WhatIDo.tsx": {
+    "mtime": 1780958996.3546565,
+    "ast_hash": "0369a1aeac02313bcd9ba94b802b3d74",
+    "semantic_hash": "0369a1aeac02313bcd9ba94b802b3d74"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/components/ui/shape-landing-hero.tsx": {
+    "mtime": 1780961423.2690012,
+    "ast_hash": "461cd5f9ed89f74d79e8b183c3c1065f",
+    "semantic_hash": "461cd5f9ed89f74d79e8b183c3c1065f"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/lib/utils.ts": {
+    "mtime": 1780961394.1416266,
+    "ast_hash": "dc324dbc575d62dad0e6a44770e3048a",
+    "semantic_hash": "dc324dbc575d62dad0e6a44770e3048a"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/main.tsx": {
+    "mtime": 1780958996.3570218,
+    "ast_hash": "4ef1e3fba8dc9c693eb6240625044801",
+    "semantic_hash": "4ef1e3fba8dc9c693eb6240625044801"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/src/vite-env.d.ts": {
+    "mtime": 1780958996.3571305,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": "0352474ba2918efe13895edbc3780d94"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/tsconfig.app.json": {
+    "mtime": 1780961385.4054005,
+    "ast_hash": "d937c4e111af9f64a0410bf726336009",
+    "semantic_hash": "d937c4e111af9f64a0410bf726336009"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/tsconfig.json": {
+    "mtime": 1780958996.3573499,
+    "ast_hash": "99b5aebe876f4f7cbae06514a7a8a014",
+    "semantic_hash": "99b5aebe876f4f7cbae06514a7a8a014"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/tsconfig.node.json": {
+    "mtime": 1780958996.3575578,
+    "ast_hash": "d65e0efec08ed30f42b4382d00b74d23",
+    "semantic_hash": "d65e0efec08ed30f42b4382d00b74d23"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/vite.config.ts": {
+    "mtime": 1780961383.5298057,
+    "ast_hash": "03e949fa8de55498870e006ae5d8ee27",
+    "semantic_hash": "03e949fa8de55498870e006ae5d8ee27"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/index.html": {
+    "mtime": 1780958996.3470747,
+    "ast_hash": "12f897ca8e99f42198b62f2ab8d1cb57",
+    "semantic_hash": "12f897ca8e99f42198b62f2ab8d1cb57"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/CV new.pdf": {
+    "mtime": 1780958996.346692,
+    "ast_hash": "10b8b14a62f3bdc91f55345ed5c9d82f",
+    "semantic_hash": "10b8b14a62f3bdc91f55345ed5c9d82f"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/public/CV new.pdf": {
+    "mtime": 1780958996.3483028,
+    "ast_hash": "10b8b14a62f3bdc91f55345ed5c9d82f",
+    "semantic_hash": "10b8b14a62f3bdc91f55345ed5c9d82f"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/public/resume_new.pdf": {
+    "mtime": 1780958996.3499265,
+    "ast_hash": "76f9a489fb66fff390b804d11b6d1379",
+    "semantic_hash": "76f9a489fb66fff390b804d11b6d1379"
+  },
+  "/Users/v1cky1611/Documents/Antigravity/vignesh personal website/.claude/worktrees/cv-update/resume_new.pdf": {
+    "mtime": 1780958996.3504205,
+    "ast_hash": "76f9a489fb66fff390b804d11b6d1379",
+    "semantic_hash": "76f9a489fb66fff390b804d11b6d1379"
+  }
+}

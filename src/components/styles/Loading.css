@@ -31,21 +31,16 @@
 
 .loading-bar {
     height: 100%;
-    background: var(--accentColor);
+    background: linear-gradient(to right, #5eead4, #818cf8);
     border-radius: 2px;
-    animation: loadingProgress 2s ease-in-out forwards;
+    width: 0%;
+    box-shadow: 0 0 8px rgba(94, 234, 212, 0.5);
 }
 
-@keyframes loadingProgress {
-    0% {
-        width: 0%;
-    }
-
-    50% {
-        width: 70%;
-    }
-
-    100% {
-        width: 100%;
-    }
+.loading-counter {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.35);
+    font-variant-numeric: tabular-nums;
 }
