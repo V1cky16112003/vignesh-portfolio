@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import {
+    motion,
+    useMotionValue,
+    useSpring,
+    useTransform,
+} from "framer-motion";
 import "./styles/Projects.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
     {
@@ -63,60 +65,98 @@ const projectsData = [
     },
 ];
 
-const Projects = () => {
-    const sectionRef = useRef<HTMLDivElement>(null);
+function ProjectCard({
+    project,
+    index,
+}: {
+    project: (typeof projectsData)[0];
+    index: number;
+}) {
+    const cardRef = useRef<HTMLDivElement>(null);
+    const mx = useMotionValue(0);
+    const my = useMotionValue(0);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(".project-card", {
-                scrollTrigger: {
-                    trigger: ".projects-section",
-                    start: "top 70%",
-                    end: "center 50%",
-                    scrub: 1,
-                },
-                opacity: 0,
-                y: 60,
-                stagger: 0.2,
-            });
-        }, sectionRef);
+    const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [5, -5]), {
+        stiffness: 300,
+        damping: 30,
+    });
+    const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [-5, 5]), {
+        stiffness: 300,
+        damping: 30,
+    });
 
-        return () => ctx.revert();
-    }, []);
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        mx.set((e.clientX - rect.left) / rect.width - 0.5);
+        my.set((e.clientY - rect.top) / rect.height - 0.5);
+    };
+
+    const handleMouseLeave = () => {
+        mx.set(0);
+        my.set(0);
+    };
 
     return (
-        <section className="projects-section" id="projects" ref={sectionRef}>
-            <h2>
+        <div style={{ perspective: "1200px" }}>
+            <motion.div
+                ref={cardRef}
+                className="project-card"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                    duration: 0.65,
+                    delay: index * 0.12,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                style={{ rotateX, rotateY }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                whileHover={{ borderColor: "rgba(94,234,212,0.22)" }}
+            >
+                <div className="project-number">0{index + 1}</div>
+                <div className="project-content">
+                    <h3>{project.title}</h3>
+                    <div className="project-date">{project.date}</div>
+                    {project.supervisor && (
+                        <div className="project-supervisor">{project.supervisor}</div>
+                    )}
+                    <p>{project.description}</p>
+                    <div className="project-tech">
+                        {project.tech.map((t, i) => (
+                            <span key={i}>{t}</span>
+                        ))}
+                    </div>
+                    {project.link && (
+                        <a
+                            className="project-github-link"
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View on GitHub →
+                        </a>
+                    )}
+                </div>
+            </motion.div>
+        </div>
+    );
+}
+
+const Projects = () => {
+    return (
+        <section className="projects-section" id="projects">
+            <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
                 <span>My Projects</span>
-            </h2>
+            </motion.h2>
             <div className="projects-container">
                 {projectsData.map((project, index) => (
-                    <div className="project-card" key={index}>
-                        <div className="project-number">0{index + 1}</div>
-                        <div className="project-content">
-                            <h3>{project.title}</h3>
-                            <div className="project-date">{project.date}</div>
-                            {project.supervisor && (
-                                <div className="project-supervisor">{project.supervisor}</div>
-                            )}
-                            <p>{project.description}</p>
-                            <div className="project-tech">
-                                {project.tech.map((t, i) => (
-                                    <span key={i}>{t}</span>
-                                ))}
-                            </div>
-                            {project.link && (
-                                <a
-                                    className="project-github-link"
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    View on GitHub →
-                                </a>
-                            )}
-                        </div>
-                    </div>
+                    <ProjectCard key={index} project={project} index={index} />
                 ))}
             </div>
         </section>

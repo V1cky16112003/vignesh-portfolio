@@ -1,12 +1,42 @@
+import { motion } from "framer-motion";
 import "./styles/Contact.css";
 import HoverLinks from "./HoverLinks";
 
 const Contact = () => {
     return (
         <section className="contact-section" id="contact">
-            <div className="section-container contact-container" style={{ margin: "auto" }}>
-                <h3>Contact</h3>
-                <div className="contact-flex">
+            <div
+                className="section-container contact-container"
+                style={{ margin: "auto" }}
+            >
+                {/* Availability badge */}
+                <motion.div
+                    className="contact-availability"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <span className="availability-dot" />
+                    Available for full-time roles from August 2026
+                </motion.div>
+
+                <motion.h3
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                    Contact
+                </motion.h3>
+
+                <motion.div
+                    className="contact-flex"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.65, delay: 0.2 }}
+                >
                     <div className="contact-box">
                         <h4>Email</h4>
                         <p>
@@ -28,6 +58,7 @@ const Contact = () => {
                             className="contact-social"
                             href="https://github.com/V1cky16112003"
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <HoverLinks text="Github" cursor />
                         </a>
@@ -35,6 +66,7 @@ const Contact = () => {
                             className="contact-social"
                             href="https://www.linkedin.com/in/vignesh-ram-sivakumar"
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <HoverLinks text="LinkedIn" cursor />
                         </a>
@@ -46,13 +78,20 @@ const Contact = () => {
                                 <span>— April 2024</span>
                             </div>
                             <div className="cert-item">
-                                AWS Academy Machine Learning Foundations <span>— April 2023</span>
+                                AWS Academy Machine Learning Foundations{" "}
+                                <span>— April 2023</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div style={{ marginTop: "80px", textAlign: "center" }}>
+                <motion.div
+                    style={{ marginTop: "80px", textAlign: "center" }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2>
                         Designed and Developed by{" "}
                         <span style={{ color: "var(--accentColor)" }}>
@@ -69,7 +108,7 @@ const Contact = () => {
                     >
                         2026
                     </h5>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

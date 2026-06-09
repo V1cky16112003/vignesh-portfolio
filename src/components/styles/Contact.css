@@ -7,6 +7,35 @@
     background-color: var(--backgroundColor);
 }
 
+.contact-availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border: 1px solid rgba(94, 234, 212, 0.2);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
+    margin-bottom: 28px;
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #5eead4;
+    box-shadow: 0 0 6px 2px rgba(94, 234, 212, 0.5);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 4px 1px rgba(94, 234, 212, 0.4); }
+    50% { box-shadow: 0 0 10px 4px rgba(94, 234, 212, 0.7); }
+}
+
 .contact-section h3 {
     font-size: 60px;
     font-weight: 400;

@@ -1,9 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./styles/Career.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const careerData = [
     {
@@ -46,48 +43,47 @@ const careerData = [
 const Career = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.to(".career-timeline", {
-                scrollTrigger: {
-                    trigger: ".career-section",
-                    start: "top 60%",
-                    end: "bottom 80%",
-                    scrub: 1,
-                },
-                maxHeight: "100%",
-                ease: "none",
-            });
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start 65%", "end 85%"],
+    });
 
-            gsap.from(".career-info-box", {
-                scrollTrigger: {
-                    trigger: ".career-section",
-                    start: "top 60%",
-                    end: "bottom 80%",
-                    scrub: 1,
-                },
-                opacity: 0,
-                y: 40,
-                stagger: 0.3,
-            });
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
+    const timelineScaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
         <section className="career-section" id="career" ref={sectionRef}>
-            <h2>
-                <span>My career & experience</span>
-            </h2>
-            <div
-                className="career-info section-container career-container"
+            <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <div className="career-timeline">
+                <span>My career &amp; experience</span>
+            </motion.h2>
+            <div className="career-info section-container career-container">
+                <motion.div
+                    className="career-timeline"
+                    style={{
+                        scaleY: timelineScaleY,
+                        transformOrigin: "top center",
+                    }}
+                >
                     <div className="career-dot" />
-                </div>
+                </motion.div>
+
                 {careerData.map((item, index) => (
-                    <div className="career-info-box" key={index}>
+                    <motion.div
+                        className="career-info-box"
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{
+                            duration: 0.65,
+                            delay: index * 0.08,
+                            ease: [0.25, 0.46, 0.45, 0.94],
+                        }}
+                    >
                         <div className="career-info-in">
                             <div>
                                 <h4>{item.role}</h4>
@@ -96,7 +92,7 @@ const Career = () => {
                             <h3>{item.year}</h3>
                         </div>
                         <p>{item.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>

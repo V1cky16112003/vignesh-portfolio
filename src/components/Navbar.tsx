@@ -1,33 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useScroll } from "framer-motion";
 import "./styles/Navbar.css";
 import HoverLinks from "./HoverLinks";
 
 const Navbar = () => {
     const [hidden, setHidden] = useState(false);
+    const prevScrollY = useRef(0);
+    const { scrollYProgress } = useScroll();
 
     useEffect(() => {
         const handleScroll = () => {
-            // Only show navbar when near the top of the page
-            setHidden(window.scrollY > 100);
+            const currentY = window.scrollY;
+            if (currentY > prevScrollY.current && currentY > 120) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+            prevScrollY.current = currentY;
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-        }
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
         <nav
             className="header"
             style={{
-                transform: hidden ? "translate(-50%, -100%)" : "translate(-50%, 0)",
-                transition: "transform 0.4s ease-in-out",
+                transform: hidden
+                    ? "translate(-50%, -110%)"
+                    : "translate(-50%, 0)",
+                transition: "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
             }}
         >
             <ul>
@@ -44,6 +51,10 @@ const Navbar = () => {
                     <HoverLinks text="CONTACT" />
                 </li>
             </ul>
+            <motion.div
+                className="nav-progress"
+                style={{ scaleX: scrollYProgress }}
+            />
         </nav>
     );
 };
