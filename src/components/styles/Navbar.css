@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(to right, #5eead4, #818cf8);
+    background: linear-gradient(to right, #8b5cf6, #c4b5fd);
     transform-origin: 0%;
     z-index: 10000;
     pointer-events: none;
