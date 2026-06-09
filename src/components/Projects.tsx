@@ -112,7 +112,7 @@ function ProjectCard({
                 style={{ rotateX, rotateY }}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                whileHover={{ borderColor: "rgba(94,234,212,0.22)" }}
+                whileHover={{ borderColor: "rgba(167,139,250,0.25)" }}
             >
                 <div className="project-number">0{index + 1}</div>
                 <div className="project-content">
