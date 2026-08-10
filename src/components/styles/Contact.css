@@ -107,6 +107,18 @@ a.contact-social {
     font-size: 14px;
 }
 
+.cert-item a {
+    color: #ccc;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cert-item a:hover {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+}
+
 @media only screen and (max-width: 1600px) {
     .contact-section h3 {
         font-size: 50px;

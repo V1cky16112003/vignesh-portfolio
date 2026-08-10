@@ -18,7 +18,7 @@ const Contact = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="availability-dot" />
-                    Available for full-time roles from August 2026
+                    Available for Full-Time roles immediately
                 </motion.div>
 
                 <motion.h3
@@ -74,12 +74,27 @@ const Contact = () => {
                         <div className="contact-certifications">
                             <h4>Certifications</h4>
                             <div className="cert-item">
-                                Oracle Cloud Infrastructure 2023 Certified Foundations Associate{" "}
-                                <span>— April 2024</span>
+                                Model Context Protocol: Advanced Topics{" "}
+                                <span>— Anthropic, 2026</span>
                             </div>
                             <div className="cert-item">
-                                AWS Academy Machine Learning Foundations{" "}
-                                <span>— April 2023</span>
+                                AI Fluency Framework &amp; Foundations{" "}
+                                <span>— Anthropic, 2026</span>
+                            </div>
+                        </div>
+
+                        <div className="contact-certifications">
+                            <h4>Publications</h4>
+                            <div className="cert-item">
+                                <a
+                                    href="https://doi.org/10.1063/5.0331220"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Survey on Speech Recognition, Transcription &amp;
+                                    Summarisation Techniques
+                                </a>{" "}
+                                <span>— 2024</span>
                             </div>
                         </div>
                     </div>

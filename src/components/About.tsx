@@ -5,7 +5,7 @@ import "./styles/About.css";
 const stats = [
     { value: 71.7, decimals: 1, suffix: "%", label: "MSc Sem 1 Average" },
     { value: 8.73, decimals: 2, suffix: "/10", label: "B.Tech GPA" },
-    { value: 3, decimals: 0, suffix: "+", label: "AI Projects Shipped" },
+    { value: 4, decimals: 0, suffix: "+", label: "AI Systems Shipped" },
 ];
 
 function AnimatedStat({
@@ -78,12 +78,14 @@ const About = () => {
                     transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                 >
                     MSc Data Science student at King's College London (71.7% Sem 1, Distinction
-                    trajectory) building DAMS-GCT — an uncertainty-aware GNN-Transformer for
-                    multimodal emotion recognition trained on NVIDIA A100 GPUs. Work spans vision,
-                    speech, and physiological signal AI, with hands-on PyTorch, uncertainty
-                    quantification, and end-to-end ML from research prototype to containerised REST
-                    API deployment. Available for full-time AI/ML Engineer roles in London from
-                    August 2026.
+                    trajectory), whose dissertation audits a published IEEE TAFFC 2025
+                    emotion-recognition benchmark and exposes it as an evaluation-leakage artefact,
+                    backed by statistically validated honest baselines. Most recently designed the
+                    authorization policy layer for an AI agent security runtime at a stealth
+                    startup, mapping the OWASP Agentic &amp; LLM Top 10 onto a Cedar-ready decision
+                    matrix. Work spans agentic RAG systems, physiological signal AI, and
+                    reproducible ML research — from PyTorch prototypes to production FastAPI
+                    deployments. Available for Full-Time roles immediately.
                 </motion.p>
                 <div className="about-stats">
                     {stats.map((stat, i) => (

@@ -9,31 +9,50 @@ import "./styles/Projects.css";
 
 const projectsData = [
     {
-        title: "DAMS-GCT: Uncertainty-Aware Multimodal Emotion Recognition",
+        title:
+            "Multimodal Emotion Recognition on SEED-VII: Reproducibility Critique & Honest Baseline",
         subtitle: "MSc Dissertation",
-        date: "Jan 2026 – Present",
-        supervisor: "King's College London · Supervisor: Dr. Helen Yannakoudakis",
+        date: "2025 – 2026",
+        supervisor: "King's College London",
         description:
-            "Designed DAMS-GCT (Dynamic Adaptive Multi-Scale Graph-Convolutional Transformer) — cross-modal attention fusion over spatio-temporal GNNs and Transformer encoders, processing EEG (310-dim) and eye-movement signals (33-dim) jointly on SEED-VII (20 subjects, 7 emotion classes). Reproduced the MAET baseline (52.46%) and implemented Monte Carlo Dropout for calibrated uncertainty quantification.",
+            "Audited a published IEEE TAFFC 2025 benchmark (71.28% claimed accuracy) by replicating it on King's A100 GPU cluster, proving the figure is an evaluation-leakage artefact unreachable under any leak-free protocol. Designed a block-size leakage sweep across 20 subjects that reproduced the original figure to within 0.17pp (paired Wilcoxon, W=0, p<2e-6, d=3.72), established honest baselines of 48–53%, and validated the leakage mechanism on an independent 44-participant industrial EEG dataset (+13.81pp inflation, p=1.15e-8). Delivered a full reproducibility package with pinned dependencies, fixed seeds, and unit tests.",
         tech: [
             "PyTorch",
-            "GNNs",
-            "Transformers",
-            "EEG Signal Processing",
-            "Uncertainty Quantification",
-            "Transfer Learning",
-            "Weights & Biases",
+            "Graph Neural Networks",
+            "Self-Supervised Learning",
             "SLURM/HPC",
+            "EEG Signal Processing",
+            "Statistical Hypothesis Testing",
+        ],
+        link: null,
+    },
+    {
+        title: "ArXiv Research Intelligence Agent",
+        subtitle: "Production RAG System · Personal Project",
+        date: "2026",
+        supervisor: null,
+        description:
+            "Engineered a four-node LangGraph agent (Planner → Executor → Critic → Reporter) with a Critic-driven retry loop, shipped as a full-stack platform over 50,000 ArXiv ML papers — FastAPI backend on Hugging Face Spaces, React 18/Vite frontend on Vercel, with GitHub Actions CI/CD running a RAGAS quality gate that blocks merges below 0.80 faithfulness. Built a two-stage ingestion pipeline embedding abstracts into pgvector with HNSW indexing, and an LLM routing layer — Groq Llama 3.3 70B primary with automatic Gemini 2.5 Flash fallback — plus Upstash Redis caching for response deduplication.",
+        tech: [
+            "LangGraph",
+            "FastAPI",
+            "PostgreSQL (pgvector)",
+            "Groq",
+            "Gemini 2.5 Flash",
+            "React 18",
+            "Docker",
+            "GitHub Actions",
+            "MLflow",
         ],
         link: null,
     },
     {
         title: "Conversational Multimodal Image Recognition Chatbot",
-        subtitle: "A Multimodal AI Approach",
+        subtitle: "SRM Institute of Science and Technology",
         date: "Jan 2025 – May 2025",
-        supervisor: "SRM Institute · Supervisor: Dr. J. Selvin Paul Peter",
+        supervisor: null,
         description:
-            "Built a multimodal chatbot combining real-time image recognition (Gemini 2.0 Flash), OCR (Azure Computer Vision), and voice I/O (Azure Speech) with support for English, Tamil, Hindi, and Telugu. Designed a production REST API with FastAPI backend and React.js frontend handling real-time multimodal inference with sub-second latency.",
+            "Built a multimodal chatbot combining real-time image recognition (Gemini 2.0 Flash), OCR (Azure Computer Vision), and voice I/O (Azure Speech) with support for English, Tamil, Hindi, and Telugu. Designed a production REST API with FastAPI backend and React.js frontend handling real-time multimodal inference across 4 languages with sub-second latency.",
         tech: [
             "Gemini 2.0 Flash",
             "Azure Cognitive Services",
@@ -45,23 +64,6 @@ const projectsData = [
             "STT",
         ],
         link: "https://github.com/V1cky16112003/Conversational-Image-Recognition-Chatbot",
-    },
-    {
-        title: "Automated Lecture Transcription & Summarisation System",
-        subtitle: "AI-Powered Education Tool",
-        date: "Aug 2024 – Nov 2024",
-        supervisor: "SRM Institute · Supervisor: Dr. J. Selvin Paul Peter",
-        description:
-            "Built an automated pipeline using OpenAI Whisper (transcription), T5 (summarisation), and Google Translate API (translation) across 4 languages — English, Tamil, Hindi, and Telugu. Tested on live TedX audio, achieving 95% transcription accuracy.",
-        tech: [
-            "OpenAI Whisper",
-            "T5 Summarisation",
-            "Google Translate API",
-            "Python",
-            "NLP",
-            "Neural Machine Translation",
-        ],
-        link: "https://github.com/V1cky16112003/Automated-Lecture-Transcription-and-Summarization-Sytsem-with-Multilingual-Support",
     },
 ];
 

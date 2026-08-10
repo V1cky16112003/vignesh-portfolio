@@ -223,9 +223,9 @@ function HeroGeometric({
                         className="mb-10"
                     >
                         <p className="text-sm sm:text-base text-white/30 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                            Building uncertainty-aware AI systems — from GNN-Transformer architectures
-                            to multimodal REST APIs. Available for AI/ML Engineer roles in London from
-                            August 2026.
+                            Auditing published AI benchmarks, building agentic RAG systems, and
+                            designing security policy for autonomous agents. Available for
+                            Full-Time roles immediately.
                         </p>
                     </motion.div>
 

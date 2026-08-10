@@ -5,10 +5,10 @@ import "./styles/Career.css";
 const careerData = [
     {
         year: "NOW",
-        role: "ML Research Engineer (MSc Dissertation)",
-        company: "King's College London",
+        role: "AI Security Researcher / Policy Architect",
+        company: "Guard AI — Stealth Startup",
         description:
-            "Designing DAMS-GCT (Dynamic Adaptive Multi-Scale Graph-Convolutional Transformer) for 7-class emotion recognition, fusing EEG, EDA, and BVP signals from SEED-VII across 20 subjects. Trained on KCL's HPC cluster using NVIDIA A100 GPUs. Implemented Monte Carlo Dropout for calibrated uncertainty quantification.",
+            "Designed and stress-tested the authorization policy layer of a runtime security system mediating every action an autonomous AI agent proposes. Authored a Cedar-ready policy specification mapping the full OWASP Agentic & LLM Top 10 onto an action×resource decision matrix, and architected a core information-flow model — structural provenance tracking, two-axis authorization, and a bounded declassification lattice — validated against real production incidents including EchoLeak (CVE-2025-32711) and MCP Tool Poisoning.",
     },
     {
         year: "2025",
