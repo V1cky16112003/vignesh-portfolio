@@ -78,14 +78,17 @@ const About = () => {
                     transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                 >
                     MSc Data Science student at King's College London (71.7% Sem 1, Distinction
-                    trajectory), whose dissertation audits a published IEEE TAFFC 2025
-                    emotion-recognition benchmark and exposes it as an evaluation-leakage artefact,
-                    backed by statistically validated honest baselines. Most recently designed the
-                    authorization policy layer for an AI agent security runtime at a stealth
-                    startup, mapping the OWASP Agentic &amp; LLM Top 10 onto a Cedar-ready decision
-                    matrix. Work spans agentic RAG systems, physiological signal AI, and
-                    reproducible ML research — from PyTorch prototypes to production FastAPI
-                    deployments. Available for Full-Time roles immediately.
+                    trajectory) who builds full-stack agentic systems end to end — from a
+                    production LangGraph RAG agent over 50,000 ArXiv papers with a Critic-driven
+                    retry loop and a CI-gated RAGAS quality bar, to an MCP server exposing tools
+                    for direct LLM control from Claude Desktop/Web. Final-year project audits a
+                    published IEEE TAFFC 2025 emotion-recognition benchmark and exposes it as an
+                    evaluation-leakage artefact, backed by statistically validated honest
+                    baselines. Also designed the authorization policy layer for an AI agent
+                    security runtime at a stealth startup, mapping the OWASP Agentic &amp; LLM Top
+                    10 onto a Cedar-ready decision matrix. Comfortable across the stack — PyTorch
+                    research prototypes, FastAPI/MCP backends, pgvector-backed retrieval, and
+                    serverless deployment on Vercel. Available for Full-Time roles immediately.
                 </motion.p>
                 <div className="about-stats">
                     {stats.map((stat, i) => (

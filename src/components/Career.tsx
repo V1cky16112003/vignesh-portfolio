@@ -4,7 +4,7 @@ import "./styles/Career.css";
 
 const careerData = [
     {
-        year: "NOW",
+        year: "2026",
         role: "AI Security Researcher / Policy Architect",
         company: "Guard AI — Stealth Startup",
         description:
