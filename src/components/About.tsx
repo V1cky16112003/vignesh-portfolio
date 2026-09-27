@@ -1,105 +1,64 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
 import "./styles/About.css";
 
-const stats = [
-    { value: 71.7, decimals: 1, suffix: "%", label: "MSc Sem 1 Average" },
-    { value: 8.73, decimals: 2, suffix: "/10", label: "B.Tech GPA" },
-    { value: 4, decimals: 0, suffix: "+", label: "AI Systems Shipped" },
+const outcomes = [
+    { figure: "50,000", text: "ArXiv papers indexed by my LangGraph research agent" },
+    { figure: "0.80", text: "RAGAS faithfulness bar that CI enforces before any merge" },
+    { figure: "0.17pp", text: "gap between my reproduction and a published 71.28% result, which I showed was leakage" },
+    { figure: "10", text: "MCP tools served from a stateless, authenticated Vercel deployment" },
 ];
 
-function AnimatedStat({
-    value,
-    decimals,
-    suffix,
-    label,
-    active,
-    delay,
-}: {
-    value: number;
-    decimals: number;
-    suffix: string;
-    label: string;
-    active: boolean;
-    delay: number;
-}) {
-    const [displayed, setDisplayed] = useState("0");
-
-    useEffect(() => {
-        if (!active) return;
-        const duration = 1600;
-        const start = Date.now();
-
-        const tick = () => {
-            const elapsed = Date.now() - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = value * eased;
-            setDisplayed(current.toFixed(decimals));
-            if (progress < 1) requestAnimationFrame(tick);
-        };
-
-        requestAnimationFrame(tick);
-    }, [active, value, decimals]);
-
-    return (
-        <motion.div
-            className="about-stat"
-            initial={{ opacity: 0, y: 20 }}
-            animate={active ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay }}
-        >
-            <div className="about-stat-value">
-                {displayed}
-                {suffix}
-            </div>
-            <div className="about-stat-label">{label}</div>
-        </motion.div>
-    );
-}
+const skills = [
+    {
+        area: "AI and ML",
+        items: "Python, PyTorch, TensorFlow, graph neural networks, Transformers, LangGraph, RAG, NLP, computer vision, multimodal models, OWASP LLM Top 10",
+    },
+    {
+        area: "Backend and deployment",
+        items: "FastAPI, Model Context Protocol (FastMCP, Starlette), PostgreSQL with pgvector, MySQL, SQL, Docker, CI/CD with GitHub Actions, MLflow, Vercel serverless, Azure Cognitive Services",
+    },
+];
 
 const About = () => {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const isInView = useInView(sectionRef, { once: true, margin: "-120px 0px" });
-
     return (
-        <section className="about-section" id="about" ref={sectionRef}>
-            <div className="about-me">
-                <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                >
-                    About Me
-                </motion.h3>
-                <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-                >
-                    MSc Data Science student at King's College London (71.7% Sem 1, Distinction
-                    trajectory) who builds full-stack agentic systems end to end — from a
-                    production LangGraph RAG agent over 50,000 ArXiv papers with a Critic-driven
-                    retry loop and a CI-gated RAGAS quality bar, to an MCP server exposing tools
-                    for direct LLM control from Claude Desktop/Web. Final-year project audits a
-                    published IEEE TAFFC 2025 emotion-recognition benchmark and exposes it as an
-                    evaluation-leakage artefact, backed by statistically validated honest
-                    baselines. Also designed the authorization policy layer for an AI agent
-                    security runtime at a stealth startup, mapping the OWASP Agentic &amp; LLM Top
-                    10 onto a Cedar-ready decision matrix. Comfortable across the stack — PyTorch
-                    research prototypes, FastAPI/MCP backends, pgvector-backed retrieval, and
-                    serverless deployment on Vercel. Available for Full-Time roles immediately.
-                </motion.p>
-                <div className="about-stats">
-                    {stats.map((stat, i) => (
-                        <AnimatedStat
-                            key={i}
-                            {...stat}
-                            active={isInView}
-                            delay={0.3 + i * 0.12}
-                        />
+        <section className="section" id="about" aria-labelledby="about-title">
+            <h2 className="section-title" id="about-title">
+                About
+            </h2>
+            <div className="about-body">
+                <p className="prose">
+                    I'm an MSc Data Science student at King's College London (71.7% in semester
+                    one, on track for a Distinction) who builds agentic systems end to end. That
+                    covers a production LangGraph RAG agent over 50,000 ArXiv papers with a
+                    Critic-driven retry loop and a CI-gated RAGAS quality bar, and an MCP server
+                    that lets Claude Desktop and Claude Web drive an app directly.
+                </p>
+                <p className="prose">
+                    My final-year project audits a published IEEE TAFFC 2025 emotion-recognition
+                    benchmark and shows its headline number is an evaluation-leakage artefact,
+                    backed by statistically validated honest baselines. At a stealth startup I
+                    designed the authorization policy layer for an AI agent security runtime,
+                    mapping the OWASP Agentic and LLM Top 10 onto a Cedar-ready decision matrix.
+                </p>
+
+                <h3 className="about-subtitle">Results I can point to</h3>
+                <ul className="outcomes">
+                    {outcomes.map((o) => (
+                        <li key={o.figure}>
+                            <span className="outcome-figure">{o.figure}</span>
+                            <span>{o.text}</span>
+                        </li>
                     ))}
-                </div>
+                </ul>
+
+                <h3 className="about-subtitle">Tools I use</h3>
+                <dl className="skills">
+                    {skills.map((s) => (
+                        <div key={s.area}>
+                            <dt>{s.area}</dt>
+                            <dd>{s.items}</dd>
+                        </div>
+                    ))}
+                </dl>
             </div>
         </section>
     );

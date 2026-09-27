@@ -1,61 +1,61 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "framer-motion";
+import { useState } from "react";
 import "./styles/Navbar.css";
-import HoverLinks from "./HoverLinks";
+
+type Theme = "light" | "dark";
+
+const getInitialTheme = (): Theme =>
+    document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 
 const Navbar = () => {
-    const [hidden, setHidden] = useState(false);
-    const prevScrollY = useRef(0);
-    const { scrollYProgress } = useScroll();
+    const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentY = window.scrollY;
-            if (currentY > prevScrollY.current && currentY > 120) {
-                setHidden(true);
-            } else {
-                setHidden(false);
-            }
-            prevScrollY.current = currentY;
-        };
-
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const scrollToSection = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const toggleTheme = () => {
+        const next: Theme = theme === "dark" ? "light" : "dark";
+        if (next === "dark") document.documentElement.dataset.theme = "dark";
+        else delete document.documentElement.dataset.theme;
+        try {
+            localStorage.setItem("theme", next);
+        } catch {
+            // Storage can be blocked; the toggle still works for this visit.
+        }
+        setTheme(next);
     };
 
     return (
-        <nav
-            className="header"
-            style={{
-                transform: hidden
-                    ? "translate(-50%, -110%)"
-                    : "translate(-50%, 0)",
-                transition: "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            }}
-        >
-            <ul>
-                <li onClick={() => scrollToSection("about")}>
-                    <HoverLinks text="ABOUT" />
-                </li>
-                <li onClick={() => scrollToSection("career")}>
-                    <HoverLinks text="CAREER" />
-                </li>
-                <li onClick={() => scrollToSection("projects")}>
-                    <HoverLinks text="PROJECTS" />
-                </li>
-                <li onClick={() => scrollToSection("contact")}>
-                    <HoverLinks text="CONTACT" />
-                </li>
-            </ul>
-            <motion.div
-                className="nav-progress"
-                style={{ scaleX: scrollYProgress }}
-            />
-        </nav>
+        <header className="header">
+            <div className="header-inner page">
+                <a className="header-name" href="#top">
+                    Vignesh Ram Sivakumar
+                </a>
+                <nav aria-label="Main">
+                    <ul className="header-links">
+                        <li>
+                            <a href="#work">Work</a>
+                        </li>
+                        <li>
+                            <a href="#experience">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/Vignesh_Ram_Sivakumar_CV_LaTeX.pdf" target="_blank" rel="noopener noreferrer">
+                                CV
+                            </a>
+                        </li>
+                        <li>
+                            <button
+                                type="button"
+                                className="theme-toggle"
+                                onClick={toggleTheme}
+                            >
+                                {theme === "dark" ? "Light mode" : "Dark mode"}
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     );
 };
 
