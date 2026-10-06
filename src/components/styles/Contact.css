@@ -58,3 +58,11 @@
         grid-column: 1;
     }
 }
+
+/* Entry to /admin; reads as plain footer text */
+.footer-quiet,
+.footer-quiet:hover {
+    color: inherit;
+    text-decoration: none;
+    cursor: text;
+}

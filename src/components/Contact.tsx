@@ -1,6 +1,9 @@
+import { toTel, useContent } from "../content";
 import "./styles/Contact.css";
 
 const Contact = () => {
+    const { contact } = useContent();
+
     return (
         <>
             <section className="section" id="contact" aria-labelledby="contact-title">
@@ -8,61 +11,65 @@ const Contact = () => {
                     Contact
                 </h2>
                 <div>
-                    <p className="contact-lead">
-                        I'm in London and available for full-time AI engineering roles now. Email is
-                        the fastest way to reach me.
-                    </p>
+                    <p className="contact-lead">{contact.lead}</p>
                     <p className="contact-email">
-                        <a href="mailto:vigneshsiva9889@gmail.com">vigneshsiva9889@gmail.com</a>
+                        <a href={`mailto:${contact.email}`}>{contact.email}</a>
                     </p>
 
                     <dl className="contact-details">
                         <div>
                             <dt>Phone</dt>
                             <dd>
-                                <a href="tel:+447818460941">+44 07818460941</a>
+                                <a href={toTel(contact.phone)}>{contact.phone}</a>
                             </dd>
                         </div>
                         <div>
                             <dt>Location</dt>
-                            <dd>London, UK</dd>
+                            <dd>{contact.location}</dd>
                         </div>
                         <div>
                             <dt>Elsewhere</dt>
                             <dd>
-                                <a href="https://github.com/V1cky16112003" target="_blank" rel="noopener noreferrer">
+                                <a href={contact.github} target="_blank" rel="noopener noreferrer">
                                     GitHub
                                 </a>
                                 ,{" "}
-                                <a
-                                    href="https://www.linkedin.com/in/vignesh-ram-sivakumar"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                                     LinkedIn
                                 </a>
                             </dd>
                         </div>
-                        <div>
-                            <dt>Certifications</dt>
-                            <dd>Model Context Protocol: Advanced Topics, Anthropic, 2026</dd>
-                            <dd>AI Fluency Framework &amp; Foundations, Anthropic, 2026</dd>
-                        </div>
-                        <div>
-                            <dt>Publication</dt>
-                            <dd>
-                                <a href="https://doi.org/10.1063/5.0331220" target="_blank" rel="noopener noreferrer">
-                                    Survey on Speech Recognition, Transcription &amp; Summarisation
-                                    Techniques
-                                </a>
-                                , 2024
-                            </dd>
-                        </div>
+                        {contact.certifications.length > 0 && (
+                            <div>
+                                <dt>Certifications</dt>
+                                {contact.certifications.map((cert) => (
+                                    <dd key={cert}>{cert}</dd>
+                                ))}
+                            </div>
+                        )}
+                        {contact.publications.length > 0 && (
+                            <div>
+                                <dt>Publication</dt>
+                                {contact.publications.map((pub) => (
+                                    <dd key={pub.title}>
+                                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                            {pub.title}
+                                        </a>
+                                        , {pub.year}
+                                    </dd>
+                                ))}
+                            </div>
+                        )}
                     </dl>
                 </div>
             </section>
             <footer className="footer">
-                <p>Vignesh Ram Sivakumar, 2026. Designed and built by me.</p>
+                <p>
+                    Vignesh Ram Sivakumar, 2026. Designed and built by{" "}
+                    <a className="footer-quiet" href="/admin">
+                        me.
+                    </a>
+                </p>
             </footer>
         </>
     );

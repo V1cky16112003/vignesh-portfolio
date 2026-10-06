@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CV_URL } from "../content";
 import "./styles/Navbar.css";
 
 type Theme = "light" | "dark";
@@ -39,7 +40,7 @@ const Navbar = () => {
                             <a href="#contact">Contact</a>
                         </li>
                         <li>
-                            <a href="/Vignesh_Ram_Sivakumar_CV_LaTeX.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href={CV_URL} target="_blank" rel="noopener noreferrer">
                                 CV
                             </a>
                         </li>
