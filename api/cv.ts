@@ -10,7 +10,11 @@ const MAX_BYTES = 4_400_000;
 
 // GET: the latest uploaded CV.
 export async function GET(request: Request) {
-    const result = await get(PATH, { access: "private", useCache: false });
+    // A read failure falls back like a missing file, so the public page never breaks.
+    const result = await get(PATH, { access: "private", useCache: false }).catch((error) => {
+        console.error("Blob read failed", error);
+        return null;
+    });
     if (!result || result.statusCode !== 200) {
         return Response.redirect(new URL(FALLBACK, request.url), 302);
     }

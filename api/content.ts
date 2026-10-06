@@ -8,7 +8,11 @@ const ARRAYS = ["projects", "skills", "sections", "career"];
 // GET: the saved site content, or 404 so the page falls back to its bundled defaults.
 // Cached briefly at the edge; /admin adds a query string to read past the cache.
 export async function GET() {
-    const result = await get(PATH, { access: "private", useCache: false });
+    // A read failure falls back like a missing file, so the public page never breaks.
+    const result = await get(PATH, { access: "private", useCache: false }).catch((error) => {
+        console.error("Blob read failed", error);
+        return null;
+    });
     if (!result || result.statusCode !== 200) return json({ error: "No saved content" }, 404);
 
     return new Response(result.stream, {
